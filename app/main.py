@@ -41,7 +41,7 @@ def write_students_information(student_list: list[Student]) -> int:
 def read_groups_information() -> list[str]:
     with open("groups.pickle", "rb") as f:
         groups_data = pickle.load(f)
-    return sorted({i.speciality.name for i in groups_data})
+    return sorted({i.specialty.name for i in groups_data})
 
 
 def read_students_information() -> list[Student]:
