@@ -3,7 +3,7 @@ import pickle
 
 
 @dataclass
-class Speciality:
+class Specialty:
     name: str
     number: int
 
@@ -16,12 +16,12 @@ class Student:
     average_mark: float
     has_scholarship: bool
     phone_number: str
-    adress: str
+    address: str
 
 
 @dataclass
 class Group:
-    speciality: Speciality
+    specialty: Specialty
     course: int
     students: list[Student]
 
@@ -45,6 +45,6 @@ def read_groups_information() -> list[str]:
 
 
 def read_students_information() -> list[Student]:
-    with open("student.pickle", "rb") as f:
+    with open("students.pickle", "rb") as f:
         students_data = pickle.load(f)
     return list(students_data)
